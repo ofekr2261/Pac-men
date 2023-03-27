@@ -1,0 +1,62 @@
+body {
+  background-color: black;
+  color:white;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.cell img {
+  width: 30px;
+}
+
+.modal {
+  display: none;
+  background-color: black;
+  border: 5px solid white;
+  width: 400px;
+  padding: 20px;
+
+  position: absolute;
+  top: 300px;
+  left: calc(50% - 175px);
+}
+
+.user-msg {
+  text-align: center;
+}
+
+.restart-btn {
+  box-shadow: inset 0px 0px 21px 11px #9fb4f2;
+  background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  background-color: #7892c2;
+  border-radius: 12px;
+  border: 4px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 15px;
+  padding: 12px 30px;
+  text-decoration: none;
+  text-shadow: 0px 0px 25px #283966;
+}
+.restart-btn:hover {
+  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  background-color: #476e9e;
+}
+.restart-btn:active {
+  position: relative;
+  top: 1px;
+}
+
+
+/* .formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+} */
