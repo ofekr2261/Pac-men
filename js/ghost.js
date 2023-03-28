@@ -54,6 +54,7 @@ function moveGhost(ghost) {
 
   // DONE: hitting a pacman? call gameOver
   if (nextCell === PACMAN) {
+    if (gPacman.isSuper) return;
     gameOver();
     return;
   }
@@ -112,6 +113,7 @@ function removeGhost(location) {
     var location = gGhosts[i].location;
     if (location.i === location.i && location.j === location.j) {
       var deadGhost = gGhosts.splice(i, 1)[0];
+      checkGhostCrllContent(deadGhost);
       setTimeout(reviveGhost, 5000, deadGhost);
     }
   }
@@ -124,4 +126,11 @@ function reviveGhost(ghost) {
 function getGhostHTML(ghost) {
   var ghostColor = gPacman.isSuper ? 'blue' : (ghost.color = getRandomColor());
   return `<span style="background-color:${ghostColor};">${GHOST}</span>`;
+}
+
+function checkGhostCrllContent(ghost) {
+  if (ghost.currCellContent === FOOD) {
+    updateScore(1);
+    ghost.currCellContent = EMPTY;
+  }
 }
